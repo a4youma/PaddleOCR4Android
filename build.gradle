@@ -1,0 +1,51 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.gradle_plugin = '4.1.2'
+    ext.kotlin_plugin = '1.6.10'
+    repositories {
+        mavenLocal()
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url "https://jitpack.io" }
+        maven { url 'https://120.25.164.233:8081/nexus/content/groups/public/' }
+        google { url 'https://maven.aliyun.com/repository/google' }
+        mavenCentral { url 'https://maven.aliyun.com/repository/public' }
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:${gradle_plugin}"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlin_plugin}"
+    }
+}
+
+ext {
+    versions = [
+            applicationId : "cn.android.JsX",
+            appVersionCode: 1,
+            appVersionName: "1.0.0",
+            devVersionCode: 1,
+            devVersionName: "1.0.0",
+            target        : 26,
+            mini          : 23,
+            compile       : 29,
+            buildTool     : "29.0.3",
+            Gradle        : "6.5",
+            IDE           : "Android Studio Chipmunk | 2021.2.1",
+            JDK           : "11.0.12",
+            OS            : "windows10-x64",
+    ]
+}
+
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
