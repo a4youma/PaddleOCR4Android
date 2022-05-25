@@ -21,7 +21,7 @@ buildscript {
 
 ext {
     versions = [
-            applicationId : "cn.android.JsX",
+            applicationId : "cn.android.ocr",
             appVersionCode: 1,
             appVersionName: "1.0.0",
             devVersionCode: 1,
